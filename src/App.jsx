@@ -1,15 +1,18 @@
-import MainNav from "./components/Header/MainNav"
-import TopBar from "./components/Header/TopBar"
-
-
+import { Route, Routes } from "react-router-dom"
+import { publicRouter } from "./routes/routes"
+import MainLayout from "./pages/defaultlayout/MainLayout"
 
 function App() {
-
   return (
-    <>
-    <TopBar/>
-    <MainNav/>
-    </>
+    <Routes>
+      <Route path="/" element={<MainLayout />}>
+        <Route>
+          {publicRouter.map((route, index) => (
+            <Route key={index} path={route.path} element={route.element} />
+          ))}
+        </Route>
+      </Route>
+    </Routes>
   )
 }
 
