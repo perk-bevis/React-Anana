@@ -6,11 +6,9 @@ function App() {
   return (
     <Routes>
       <Route path="/" element={<MainLayout />}>
-        <Route>
-          {publicRouter.map((route, index) => (
+        {publicRouter.map((route, index) => (
             <Route key={index} path={route.path} element={route.element} />
           ))}
-        </Route>
       </Route>
     </Routes>
   )

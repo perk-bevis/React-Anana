@@ -8,10 +8,11 @@ import OutletSales from '../../assets/images/Dropmenu-Promotion.jpg'
 import DropmenuAccessory from '../../assets/images/Dropmenu-ThoitrangPhukien.jpg'
 import { Link } from 'react-router-dom'
 
-const MainNav = () => {
+const MainNav = () => { 
   return (
-    <div className='w-full h-28 flex items-center'>
-      <div className='flex justify-between w-full mt-3 px-2.5'>
+    // h-28 sửa thành h-auto sẽ tự động điều chỉnh chiều cao
+    <div className='w-full h-auto flex flex-col md:flex-row items-center'>
+      <div className='hidden md:flex justify-between w-full mt-3 px-2.5'>
         <Link to={"/"} className='mt-9 ml-[181px]'>
           <img src={LogoHeader} alt="" width={122} />
         </Link>
@@ -21,14 +22,14 @@ const MainNav = () => {
               <a href="" className='font-[Bebas_Neue ,sans-serif] font-bold'>SẢN PHẨM</a>
               <div className='opacity-0 invisible group-hover:opacity-100 group-hover:visible absolute top-[55px] left-[100px] before:content-[""] before:absolute before:right-[12px] before:top-[-30px] before:border-[20px_15px] before:border-solid before:border-transparent before:border-b-gray-700'></div>
               <ChevronDown />
-              <div className='fixed bg-gray-700 w-full h-[465px] top-[150px] left-0 right-0 z-50 opacity-0 invisible group-hover:opacity-100 group-hover:visible'>
+              <div className=' md:fixed md:bg-gray-700 md:w-full md:h-[465px] fixed bg-gray-700 w-full h-[465px] top-[150px] left-0 right-0 z-50 opacity-0 invisible group-hover:opacity-100 group-hover:visible'>
                 <div className='grid grid-cols-4 gap-12 p-4 px-80 pt-7'>
                   <div>
                     <img src={Dropmenman} alt="" />
                     <div className='text-white  text-center font-bold text-lg mt-4'>CHO NAM</div>
                   </div>
                   <div>
-                    <img src={Dropmen_meal} alt="" />
+                    <img src={Dropmen_meal} alt="" /> 
                     <div className='text-white text-center font-bold text-lg mt-4'>CHO NỮ</div>
                   </div>
                   <div>
@@ -200,7 +201,8 @@ const MainNav = () => {
             <img src={iconYou} alt="" className='mt-[-25px]' />
           </div>
         </div>
-        <div className='mt-[22px] mr-[53px] mb-[40px] ml-[22px] relative'>
+        {/* <div className='mt-[22px] mr-[53px] mb-[40px] ml-[22px] relative'> */}
+        <div className='mt-4 mx-4 md:mt-[22px] md:mr-[53px] md:mb-[40px] md:ml-[22px] relative'>
           <input type="text" placeholder='Tìm Kiếm ' className='pt-[6px] pb-[6px] pl-[34px] pr-[12px] border border-gray-400 outline-none focus:border-[rgba(102,175,233,0.6)]' />
           <Search className='absolute top-2 left-2 w-5 h-6' />
         </div>

@@ -1,6 +1,5 @@
 import SignIn from "../pages/auth/signin/SignIn";
 import CartShopping from "../pages/cart-shop/CartShopping";
-import MainLayout from "../pages/defaultlayout/MainLayout";
 import Homepage from "../pages/homepages/Homepage";
 import StoreLocator from "../pages/locator-store/StoreLocator";
 import TrackOrder from "../pages/order-tracking/TrackOrder";
