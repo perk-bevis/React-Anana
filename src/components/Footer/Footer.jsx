@@ -1,11 +1,8 @@
 import React from 'react';
-// Giả sử các đường dẫn import này là chính xác trong project của bạn
-import StoreImage from '../../assets/images/shopAnana.svg'; // Thêm import cho ảnh Store
+import StoreImage from '../../assets/images/shopAnana.svg'; 
 import BoCongThuongLogo from '../../assets/icons/MinistryofIndustryandTrade.png';
 import AnanasLogo from '../../assets/icons/Logo_Ananas_Footer.svg';
 import DmcaLogo from '../../assets/icons/dmca_protected_sml_120n.png';
-
-// Import icon từ react-icons
 import { FaFacebookF, FaInstagram, FaYoutube } from 'react-icons/fa';
 import { FiArrowRight } from 'react-icons/fi';
 import Footerresponsive from './Footerresponsive';
@@ -75,7 +72,7 @@ const Footer = () => {
               <h4 className="text-sm mb-2 font-bold text-white w-full md:w-[50%] uppercase">Đăng ký nhận mail</h4>
               <form className="flex items-center bg-white max-w-xs w-full md:w-[50%]">
                 <input type="email" placeholder="" className="border-none p-2.5 w-full text-gray-900 text-sm focus:outline-none flex-grow" />
-                <button type="submit" className="bg-gray-800 border-none text-white py-2.5 px-4 cursor-pointer text-base">
+                <button type="submit" className="bg-gray-800 border-none text-white py-2.5 px-4 cursor-pointer text-base h-10">
                   <FiArrowRight />
                 </button>
               </form>
